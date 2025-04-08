@@ -2,7 +2,7 @@
 title: Fetch Rewards Database Schema
 ---
 ```mermaid
-erDiagram;
+erDiagram
     USERS {
         varchar id PK
         varchar active
