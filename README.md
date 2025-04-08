@@ -14,9 +14,15 @@ What are the requirements?
 --------------------------
 
 1.  Review unstructured JSON data and diagram a new structured relational data model
+    * `erd.md`  
 2.  Generate a query that answers a predetermined business question
+    * `analysis/analysis.md`  
 3.  Generate a query to capture data quality issues against the new structured relational data model
+    * `etl_scripts/etl.md`  
+    * `etl_scripts/data_transform.ipynb`  
+    * `etl_scripts/database_load.ipynb`  
 4.  Write a short email or Slack message to the business stakeholder
+    * `stakeholder_email.md`  
 
 Please let us know which SQL dialect you are using and include any code, notes, etc.. that helped you develop your answers. Showing your work can only help you!
 
