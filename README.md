@@ -1,10 +1,8 @@
+
 # fetch-se-exercise
+#### Kevin Scheller-Crowley
 
 Fetch Rewards Coding Exercise - Sr. Solutions Engineer
-
-
-
-Fetch Rewards Coding Exercise - Analytics Engineer
 ==================================================
 
 In this exercise you will:
