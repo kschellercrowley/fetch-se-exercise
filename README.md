@@ -24,6 +24,7 @@ What are the requirements?
 4.  Write a short email or Slack message to the business stakeholder
     * `stakeholder_email.md`  
 
+--------------------------
 Please let us know which SQL dialect you are using and include any code, notes, etc.. that helped you develop your answers. Showing your work can only help you!
 
 ### First: Review Existing Unstructured Data and Diagram a New Structured Relational Data Model
