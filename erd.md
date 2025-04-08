@@ -58,9 +58,9 @@ erDiagram
         varchar cpg_ref
     }
 
-    USERS ||--o{ RECEIPTS : has;
-    RECEIPTS ||--o{ RECEIPTS_ITEMS : contains;
-    BRANDS ||--o{ RECEIPTS_ITEMS : "appears in";
+    USERS ||--o{ RECEIPTS : has
+    RECEIPTS ||--o{ RECEIPTS_ITEMS : contains
+    BRANDS ||--o{ RECEIPTS_ITEMS : "appears in"
 ```
 
 
