@@ -65,91 +65,83 @@ erDiagram
 
 
 
--- receipts table
-    id,
-    user_id VARCHAR,
-    bonus_points_earned FLOAT,
-    bonus_points_earned_reason VARCHAR,
-    points_earned FLOAT,
-    purchased_item_count FLOAT,
-    rewards_receipt_item_list TEXT,
-    rewards_receipt_status VARCHAR,
-    total_spent FLOAT,
-    created_date TIMESTAMP,
-    date_scanned TIMESTAMP,
-    finished_date TIMESTAMP,
-    modify_date TIMESTAMP,
-    points_awarded_date TIMESTAMP,
-    purchase_date TIMESTAMP
+| receipts |
+|:-------------:|
+| id (PK) |
+| user_id (FK)|
+| bonus_points_earned |
+| bonus_points_earned_reason |
+| points_earned |
+| purchased_item_count |
+| rewards_receipt_item_list |
+| rewards_receipt_status |
+| total_spent |
+| created_date |
+| date_scanned |
+| finished_date |
+| modify_date |
+| points_awarded_date |
+| purchase_date |
 
 
--- receipts_items table
-    id VARCHAR,
-    receipt_id VARCHAR,
-    barcode VARCHAR,
-    description VARCHAR,
-    final_price FLOAT,
-    item_price FLOAT,
-    needs_fetch_review VARCHAR,
-    partner_item_id VARCHAR,
-    prevent_target_gap_points VARCHAR,
-    quantity_purchased FLOAT,
-    user_flagged_barcode VARCHAR,
-    user_flagged_new_item VARCHAR,
-    user_flagged_price FLOAT,
-    user_flagged_quantity FLOAT,
-    needs_fetch_review_reason VARCHAR,
-    points_not_awarded_reason VARCHAR,
-    points_payer_id VARCHAR,
-    rewards_group VARCHAR,
-    rewards_product_partner_id VARCHAR,
-    user_flagged_description VARCHAR,
-    original_meta_brite_barcode VARCHAR,
-    original_meta_brite_description VARCHAR,
-    brand_code VARCHAR,
-    competitor_rewards_group VARCHAR,
-    discounted_item_price FLOAT,
-    original_receipt_item_text VARCHAR,
-    item_number VARCHAR,
-    original_meta_brite_quantity_purchased FLOAT,
-    points_earned FLOAT,
-    target_price FLOAT,
-    competitive_product VARCHAR,
-    original_final_price FLOAT,
-    original_meta_brite_item_price FLOAT,
-    deleted VARCHAR,
-    price_after_coupon FLOAT,
-    metabrite_campaign_id VARCHAR
+| receipts_items |
+|:-------------:|
+| id (PK) |
+| receipt_id  (FK)|
+| barcode |
+| description |
+| final_price |
+| item_price |
+| needs_fetch_review |
+| partner_item_id |
+| prevent_target_gap_points |
+| quantity_purchased |
+| user_flagged_barcode |
+| user_flagged_new_item |
+| user_flagged_price |
+| user_flagged_quantity |
+| needs_fetch_review_reason |
+| points_not_awarded_reason |
+| points_payer_id |
+| rewards_group |
+| rewards_product_partner_id |
+| user_flagged_description |
+| original_meta_brite_barcode |
+| original_meta_brite_description |
+| brand_code  (FK)|
+| competitor_rewards_group |
+| discounted_item_price |
+| original_receipt_item_text |
+| item_number |
+| original_meta_brite_quantity_purchased |
+| points_earned |
+| target_price |
+| competitive_product |
+| original_final_price |
+| original_meta_brite_item_price |
+| deleted |
+| price_after_coupon |
+| metabrite_campaign_id |
 
--- users table
-    id VARCHAR,
-    active VARCHAR,
-    role VARCHAR,
-    sign_up_source VARCHAR,
-    state VARCHAR,
-    id VARCHAR,
-    created_date TIMESTAMP,
-    last_login TIMESTAMP
+| users |
+|:----:|
+| id (PK) |
+| active |
+| role |
+| sign_up_source |
+| state |
+| id |
+| created_date |
+| last_login |
 
--- brands table
-    barcode VARCHAR,
-    category VARCHAR,
-    category_code VARCHAR,
-    name VARCHAR,
-    top_brand BOOLEAN,
-    brand_code VARCHAR,
-    id VARCHAR,
-    cpg_id VARCHAR,
-    cpg_ref VARCHAR
-
-primary_keys_sql = """
-ALTER TABLE brands ADD PRIMARY KEY (id);
-ALTER TABLE receipts ADD PRIMARY KEY (id);
-ALTER TABLE receipts_items ADD PRIMARY KEY (id);
-ALTER TABLE users ADD PRIMARY KEY (id);
-"""
-foreign_keys_sql = """
-ALTER TABLE receipts_items ADD CONSTRAINT fk_receipt_id FOREIGN KEY (receipt_id) REFERENCES receipts(id);
-ALTER TABLE receipts ADD CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users(id);
-ALTER TABLE receipts_items ADD CONSTRAINT fk_brand_code FOREIGN KEY (brand_code) REFERENCES brand(brand_code);
-"""
+| brands |
+|:--------:|
+| id (PK) |
+| barcode |
+| category |
+| category_code |
+| name |
+| top_brand |
+| brand_code |
+| cpg_id |
+| cpg_ref |
