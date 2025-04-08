@@ -25,7 +25,7 @@ Rankings remained consistent between months:
 *Analysis: Finished receipts have close to a 4x higher average spend compared to rejected receipts.*
 
 ### 4. Total Items Purchased by Receipt Status
-- **FINISHED**: 8 |184
+- **FINISHED**: 8 ,184
 - **REJECTED**: 173
 
 *Analysis: Finished receipts account for more than 47x the number of items compared to rejected receipts.*
