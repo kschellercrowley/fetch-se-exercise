@@ -1,6 +1,6 @@
----
-title: Fetch Rewards Database Schema
----
+## Fetch Rewards Data  
+### Entity Relationship Diagram  
+
 ```mermaid
 erDiagram
     USERS {
