@@ -1,7 +1,8 @@
 ---
 title: Fetch Rewards Database Schema
 ---
-erDiagram
+```mermaid
+erDiagram;
     USERS {
         varchar id PK
         varchar active
@@ -10,7 +11,7 @@ erDiagram
         varchar state
         timestamp created_date
         timestamp last_login
-    }
+    };
     RECEIPTS {
         varchar id PK
         varchar user_id FK
@@ -27,7 +28,7 @@ erDiagram
         timestamp modify_date
         timestamp points_awarded_date
         timestamp purchase_date
-    }
+    };
     RECEIPTS_ITEMS {
         varchar id PK
         varchar receipt_id FK
@@ -44,7 +45,7 @@ erDiagram
         float original_final_price
         varchar deleted
         float price_after_coupon
-    }
+    };
     BRANDS {
         varchar id PK
         varchar brand_code
@@ -55,11 +56,12 @@ erDiagram
         boolean top_brand
         varchar cpg_id
         varchar cpg_ref
-    }
+    };
 
-    USERS ||--o{ RECEIPTS : has
-    RECEIPTS ||--o{ RECEIPTS_ITEMS : contains
-    BRANDS ||--o{ RECEIPTS_ITEMS : "appears in"
+    USERS ||--o{ RECEIPTS : has;
+    RECEIPTS ||--o{ RECEIPTS_ITEMS : contains;
+    BRANDS ||--o{ RECEIPTS_ITEMS : "appears in";
+```
 
 
 
